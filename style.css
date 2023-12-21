@@ -1,0 +1,985 @@
+/* 폰트 */
+
+@font-face {
+    font-family: "Cafe24Ohsquare";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/Cafe24Ohsquare.woff")
+      format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Cafe24Ohsquareair";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202@1.0/Cafe24Ohsquareair.woff")
+      format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 500;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Medium.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Medium.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Medium.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Medium.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Medium.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 600;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 800;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraBold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraBold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraBold.ttf') format("truetype");
+    font-display: swap;
+}
+*{
+  box-sizing: border-box;
+}
+body,ul,li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    
+}
+
+body{
+  overflow-x: hidden;
+  position: relative;
+}
+html {
+  scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.section-1bg {
+    background: url("section1.jpg") no-repeat center;
+    background-size: cover;
+    background-position: center;
+    width: 1920px;
+    height: 2917px;
+  }
+
+  /* .section-1::before{
+    content: "";
+    display: block;
+    height: 46px;
+  } */
+  .section-1{
+  width: 100%;
+  height: 1137px;
+  margin-bottom: 200px;
+}
+.section-1 > .top-bar{
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0; left: 0;
+    background: url("top-bar.png") no-repeat center;
+    /* background-position: center; */
+    width: 1920px;
+    z-index: 1;
+}   
+
+
+.section-1 > .top-bar > .right-box::before{
+  content: "";
+    display: block;
+    height: 46px;
+}
+.section-1 > .top-bar > .right-box > ul{
+    display: flex;
+    margin-left: 38px;
+}
+.section-1 > .top-bar > .right-box > ul > li{
+    border: 1px solid #D9D9D9;
+    width: 126px;
+    height: 33px;
+    text-align: center;
+    line-height: 33px;
+}
+.section-1 > .top-bar > .right-box > ul > li:hover{
+  overflow: hidden;
+}
+.section-1 > .top-bar > .right-box > ul > li:hover > a{
+    background-color: #F5DCD7;
+    color: #306F48;
+    transition: background-color 0.3s, color 0.3s; 
+}
+.section-1 > .top-bar > .right-box > ul > li > a{
+  font-family: "Pretendar";
+    font-weight: 600;
+    font-size: 16px;
+    color: #D9D9D9;
+    display: block;
+}
+.section-1 > .top-bar > .left-box::before{
+  content: "";
+  display: block;
+  height: 46px;
+}
+.section-1 > .top-bar > .left-box >.text-box {
+  border: 1px solid #D9D9D9;
+  width: 220px;
+  height: 33px;
+  margin-right: 41px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section-1 > .top-bar > .left-box >.text-box > span{
+  font-family: "Pretendard";
+    font-weight: 600;
+    font-size: 20px;
+    color: #D9D9D9;
+}
+
+
+.section-1 > .title-box{
+  position: absolute;
+  top: 190px; left: 498px;
+}
+/* section2에 border를 빼면 section2 section3 위치가 밑으로 밀려나는 이유 */
+/* section2 */
+.section-2{
+  width: 100%;
+  height: 688px; 
+  margin-bottom: 174px;
+}
+
+.section-2 > .title-box{
+  margin-bottom: 65px;
+  margin-left: 272px;
+}
+.section-2 > .title-box > h3{
+  font-family: "Pretendard";
+  font-weight: 400;
+  font-size: 30px;
+  color: #444444;
+  margin: 0;
+}
+.section-2 > .title-box > .black-box > h1{
+  font-family: "Pretendard";
+  font-weight: 700;
+  font-size: 55px;
+  background-color: #1F1F1F;
+  display: inline-block;
+  color: #F3F3F3;
+  margin: 0;
+  margin-top: 14px;
+  overflow: hidden; /* 텍스트 오버플로우 숨김 */
+  white-space: nowrap; /* 줄 바꿈 방지 */
+  border-right: 2px solid #F3F3F3; /* 타이핑 커서 효과 */
+  animation: typing 2s steps(48, end) 2s, blink-caret 0.5s infinite 2s;
+}
+
+@keyframes typing {
+  from {
+      width: 0;
+  }
+  to {
+      width: 34%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+      border-color: transparent;
+  }
+  50% {
+      border-color: #F3F3F3;
+  }
+}
+.section-2 > .main-box{
+  margin-left: 272px;
+}
+.section-2 > .main-box > p{
+  font-family: "Pretendard";
+  font-weight: 400;
+  font-size: 24px;
+  letter-spacing: -1px;
+  color: #333333;
+  margin: 0;
+  line-height: 41.8px;
+}
+.section-2 > .main-box > .fistend{
+  margin-bottom: 35px;
+}
+/* section-3 */
+.section-3{
+  width: 100%;
+  height: 864px;
+}
+
+.section-3 .Resume > .title-box {
+  margin-left: 230px;
+  margin-bottom: 60px;
+}
+
+
+.section-3 .Resume > .title-box > span {
+  font-family: "Cafe24Ohsquare";
+  font-size: 35px;
+  color: #234E33;
+  letter-spacing: -1px;
+}
+
+
+.section-3 .phto_info {
+  display: flex;
+  margin-left: 87px;
+}
+
+.section-3 .photo-box {
+  margin-left: 30px;
+}
+.section-3 .photo-box > img{
+  width: 358px; height: 358px;
+  object-fit: cover;
+}
+.section-3 .information-box > .name {
+  line-height: 1.5;
+
+  margin-left: 117px;
+}
+
+.section-3 .information-box > .name > .en {
+  font-family: "Pretendard";
+  font-weight: 700;
+  font-size: 13px;
+  color: #1f1f1f;
+  margin: 0;
+}
+
+.section-3 .information-box > .name > .ko {
+  font-family: "Pretendard";
+  font-weight: 800;
+  font-size: 29px;
+  color: #1f1f1f;
+  margin: 0;
+  letter-spacing: 5px;
+}
+
+.section-3 .info-1 {
+  display: flex;
+  margin-left: 117px;
+}
+
+.section-3 .info-1 > .info-con-1 > .about-box {
+  display: flex;
+  align-items: center;
+  line-height: 0;
+  margin-top: 50px;
+}
+
+.section-3 .info-1 > .info-con-1 > .about-box > img {
+  object-fit: cover;
+  width: 9px;
+  height: 23px;
+}
+
+.section-3 .info-1 > .info-con-1 > .about-box > p {
+  font-family: "Pretendard";
+  font-weight: 900;
+  color: #307049;
+  letter-spacing: -0.5px;
+  margin-left: 10px;
+  font-size: 24px;
+}
+
+.section-3 .info-1 > .info-con-1 > .Education-box {
+  display: flex;
+  align-items: center;
+  line-height: 0;
+  margin-top: 170px;
+}
+
+.section-3 .info-1 > .info-con-1 > .Education-box > img {
+  object-fit: cover;
+  width: 9px;
+  height: 23px;
+}
+
+.section-3 .info-1 > .info-con-1 > .Education-box > p {
+  font-family: "Pretendard";
+  font-weight: 800;
+  color: #307049;
+  letter-spacing: -0.5px;
+  margin-left: 10px;
+  font-size: 24px;
+}
+
+.section-3 .info-1 > .info-con-2 {
+  margin-left: 58px;
+}
+
+.section-3 .info-1 > .info-con-2 > .about-contents > .con-top {
+  display: flex;
+  margin-top: 43px;
+}
+
+.section-3
+  .info-1
+  > .info-con-2
+  > .about-contents
+  > .con-top
+  > .con-top-left {
+    font-family: "Pretendard";
+  font-weight: 800;
+  color: #1f1f1f;
+  font-size: 18px;
+}
+
+.section-3
+  .info-1
+  > .info-con-2
+  > .about-contents
+  > .con-top
+  > .con-top-right {
+    font-family: "Pretendard";
+  font-weight: 400;
+  color: #1f1f1f;
+  font-size: 18px;
+  margin-left: 20px;
+}
+
+.section-3 .info-1 > .info-con-2 > .about-contents > .con-bottom {
+  margin-top: 103px;
+}
+
+.section-3
+  .info-1
+  > .info-con-2
+  > .about-contents
+  > .con-bottom
+  > .con-bottom-1 {
+    font-family: "Pretendard";
+  font-weight: 400;
+  color: #1f1f1f;
+  font-size: 15px;
+}
+
+.section-3
+  .info-1
+  > .info-con-2
+  > .about-contents
+  > .con-bottom
+  > .con-bottom-1
+  > .blod {
+    font-family: "Pretendard";
+  font-weight: 800;
+  color: #1f1f1f;
+  font-size: 18px;
+  line-height: 1px;
+}
+
+.section-3
+  .info-1
+  > .info-con-2
+  > .about-contents
+  > .con-bottom
+  > .con-bottom-2 {
+    font-family: "Pretendard";
+  font-weight: 400;
+  color: #1f1f1f;
+  font-size: 15px;
+  margin-top: 40px;
+}
+
+.section-3
+  .info-1
+  > .info-con-2
+  > .about-contents
+  > .con-bottom
+  > .con-bottom-2
+  > .blod {
+    font-family: "Pretendard";
+  font-weight: 800;
+  color: #1f1f1f;
+  font-size: 18px;
+  line-height: 1px;
+}
+
+.section-3 .info-1 > .info-con-3 {
+  margin-left: 93px;
+}
+
+.section-3 .info-1 > .info-con-3 > .skills-box {
+  display: flex;
+  align-items: center;
+  line-height: 0;
+  margin-top: 50px;
+}
+
+.section-3 .info-1 > .info-con-3 > .skills-box > img {
+  object-fit: cover;
+  width: 9px;
+  height: 23px;
+}
+
+.section-3 .info-1 > .info-con-3 > .skills-box > p {
+  font-family: "Pretendard";
+  font-weight: 800;
+  color: #307049;
+  letter-spacing: -0.5px;
+  margin-left: 10px;
+  font-size: 24px;
+}
+
+.section-3 .info-1 > .info-con-3 > .keywords-box {
+  display: flex;
+  align-items: center;
+  line-height: 0;
+  margin-top: 170px;
+}
+
+.section-3 .info-1 > .info-con-3 > .keywords-box > img {
+  object-fit: cover;
+  width: 9px;
+  height: 23px;
+}
+
+.section-3 .info-1 > .info-con-3 > .keywords-box > p {
+  font-family: "Pretendard";
+  font-weight: 800;
+  color: #307049;
+  letter-spacing: -0.5px;
+  margin-left: 10px;
+  font-size: 24px;
+}
+
+.section-3 .info-1 > .info-con-4 > .skills-contents > .con-top {
+  display: flex;
+  margin-top: 32px;
+}
+
+.section-3
+  .info-1
+  > .info-con-4
+  > .skills-contents
+  > .con-top
+  > .Circle {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background-color: #307049;
+  color: #f5dcd7;
+  font-family: "Pretendard";
+  font-weight: 700;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 21px;
+}
+
+.section-3 .info-1 > .info-con-4 {
+  margin-left: 58px;
+}
+
+.section-3 .info-1 > .info-con-4 > .skills-contents > .con-bottom {
+  margin-top: 183px;
+}
+
+.section-3
+  .info-1
+  > .info-con-4
+  > .skills-contents
+  > .con-bottom
+  > .con-bottom-1 {
+  display: flex;
+}
+
+.section-3
+  .info-1
+  > .info-con-4
+  > .skills-contents
+  > .con-bottom
+  > .con-bottom-1
+  > .keyword-box {
+  background-color: #307049;
+  width: 134px;
+  height: 45px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  line-height: 0;
+  justify-content: center;
+  margin-right: 17px;
+}
+
+.section-3
+  .info-1
+  > .info-con-4
+  > .skills-contents
+  > .con-bottom
+  > .con-bottom-1
+  > .keyword-box
+  > p {
+    font-family: "Pretendard";
+  font-weight: 500;
+  color: #f5dcd7;
+  font-size: 20px;
+  margin-right: 22px;
+}
+
+.section-3
+  .info-1
+  > .info-con-4
+  > .skills-contents
+  > .con-bottom
+  > .con-bottom-1
+  > .keyword-box
+  > img {
+  width: 10px;
+  height: 11px;
+  object-fit: cover;
+}
+
+.section-3
+  .info-1
+  > .info-con-4
+  > .skills-contents
+  > .con-bottom
+  > .con-bottom-2 {
+  display: flex;
+  margin-top: 20px;
+}
+
+.section-3
+  .info-1
+  > .info-con-4
+  > .skills-contents
+  > .con-bottom
+  > .con-bottom-2
+  > .keyword-box {
+  background-color: #307049;
+  width: 134px;
+  height: 45px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  line-height: 0;
+  justify-content: center;
+  margin-right: 17px;
+}
+
+.section-3
+  .info-1
+  > .info-con-4
+  > .skills-contents
+  > .con-bottom
+  > .con-bottom-2
+  > .keyword-box
+  > p {
+    font-family: "Pretendard";
+  font-weight: 500;
+  color: #f5dcd7;
+  font-size: 20px;
+  margin-right: 22px;
+}
+
+
+/* section-4 */
+.section-2bg {
+  background: url("section2.jpg") no-repeat center;
+  background-size: cover;
+  background-position: center;
+  width: 1920px;
+  height: 6808px;
+}
+.section-4::before{
+  content: "";
+  display: block;
+  height: 242px;
+}
+.section-4{
+  width: 100%;
+  height: 1464px;
+  position: relative;
+}
+.section-4 > .title{
+  font-family: "Cafe24Ohsquare";
+  font-size: 35px;
+  color: #F1F1F1;
+  letter-spacing: -1px;
+  margin-bottom: 5px;
+  margin-left: 1546px;
+}
+.section-4 > .menu-box {
+  margin-left: 331px;
+  position: absolute;
+}
+.section-4 > .menu-box > .file-img > img{
+  width: 210px;
+  height: 223px;
+  object-fit: cover;
+}
+.section-4 > .menu-box > .file-img > img:hover{
+  opacity: 0.8;
+}
+.section-4 > .menu-box > .mouse-img > img{
+  position: absolute;
+  left: 150px;
+  top: 40px;
+}
+
+.section-4 > .menu-box nav{
+  width: 1118px;
+  height: 744px;
+  background-color: gray;
+  position: absolute;
+  top: 50px;
+  left: 190px;
+}
+.section-4 > .menu-box li{
+  background-color: #F1F1F1;
+  width: 1118px;
+  height: 186px;
+  border: 1px solid #265839;
+  box-sizing: border-box;
+}
+.section-4 > .menu-box li:hover{
+  background-color: #306F48;
+  transition: background-color 0.4s, color 0.4s; 
+}
+.section-4 > .menu-box li:hover span{
+  color: #F5DCD7;
+  transition: background-color 0.4s, color 0.4s; 
+}
+.section-4 > .menu-box li:hover p{
+  color: #ffffff;
+  transition: background-color 0.4s, color 0.4s; 
+}
+.section-4 > .menu-box li > a{
+  display: flex;
+  margin-top: 50px;
+  margin-left: 65px;
+}
+.section-4 > .menu-box li > a > span{
+  font-family: "Pretendard";
+  font-weight: 700;
+  color: #306F48;
+  font-size: 40px;
+  letter-spacing: -1px;
+}
+.section-4 > .menu-box li > a > .submenu{
+  font-family: "Pretendard";
+  font-weight: 500;
+  color: #487D5C;
+  font-size: 23px;
+  letter-spacing: -1px;
+}
+.section-4 > .menu-box li > a > .submenu1{
+  margin-left: 69px;
+}
+.section-4 > .menu-box li > a > .submenu2{
+  margin-left: 181px;
+}
+.section-4 > .menu-box li > a > .submenu3{
+  margin-left: 106px;
+}
+.section-4 > .menu-box li > a > .submenu4{
+  margin-left: 69px;
+}
+.section-4 > .menu-box li > a > .submenu > p{
+  line-height: 0;
+  margin-bottom: 40px;
+}
+.section-4 > .menu-box li > a > .submenu3{
+  display: flex;
+}
+.section-4 > .menu-box li > a > .submenu3 > .left-p > p{
+  line-height: 0;
+  margin-bottom: 40px;
+}
+.section-4 > .menu-box li > a > .submenu3 > .right-p{
+  margin-left: 80px;
+  line-height: 0;
+}
+.section-4 > .menu-box .menu_bg{
+  width: 1125px;
+  height: 733px;
+  background-color: #EFC3BB;
+  position: absolute;
+  top: 87px;
+  left: 210px;
+}
+
+
+/* section-5 */
+.section-5{
+  width: 100%;
+  height: 1712px;
+  position: relative;
+}
+
+.section-5 .toolbar-box{
+  position: absolute;
+  left: 150px; top:350px;
+}
+
+.section-5 .contents{
+  top: 185px; 
+  left: 81px;
+}
+
+.section-5 .Worksite .webdesign-box > .tabmenu{
+  width: 408px;
+  height: 63px;
+  display: flex;
+  align-items: center;
+  background-color: #535353;
+  border-radius: 10px 10px 0 0;
+  position: absolute;
+  left: 83px;
+  top: 150px;
+}
+.section-5 .contents .webdesign-box > .tabmenu > a{
+  display: flex;
+  align-items: center;
+}
+.section-5 .contents .webdesign-box > .tabmenu > a > p{
+  font-family: "Pretendard";
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 20px;
+  margin-left: 24px;
+  margin-right: 130px;
+}
+
+
+.section-5 .contents .webdesign-box > .main-box{
+  width: 1757px;
+  height: 4022px;
+  background-color: #535353;
+  position: absolute; margin: 0 auto;
+  left: 83px;
+  top: 210px;
+}
+
+/* 스와이퍼 부분 _ 웹 */
+.section-5 .contents .webdesign-box > .main-box .swiper{
+  width: 100%;
+  z-index: unset;
+  width: 1350px;
+  margin: 0 auto;
+
+}
+.section-5 .contents .webdesign-box > .main-box .swiper > h1{
+  margin-top: 195px;
+  font-family: "Cafe24Ohsquare";
+  color: #F5DCD7;
+  font-size: 90px;
+}
+
+.section-5 .contents .webdesign-box > .main-box .swiper-wrapper{
+  margin-left: auto;
+  margin-right: auto;
+  z-index: unset;
+  padding-bottom: 70px;
+}
+.section-5 .contents .webdesign-box > .main-box .swiper-slide{
+  display: flex;
+  width: 100%;
+}
+.section-5 .contents .webdesign-box > .main-box .web .swiper-slide .img-box{
+  margin-right: 65px;
+
+}
+.section-5 .contents .webdesign-box > .main-box .swiper-slide img{
+  width: 673px;
+  height: 500px;
+  object-fit: cover;
+}
+.section-5 .contents .webdesign-box > .main-box .swiper-slide .text-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+.section-5 .contents .webdesign-box > .main-box .swiper-slide .text-box h4{
+  font-family: "Pretendard";
+  font-weight: 500;
+  font-size: 30px;
+  color: #ffffff;
+}
+.section-5 .contents .webdesign-box > .main-box .swiper-slide .text-box p{
+  font-family: "Pretendard";
+  font-weight: 200;
+  font-size: 20px;
+  color: #ffffff;
+  margin: 0;
+  line-height: 34px;
+}
+.section-5 .contents .webdesign-box > .main-box .swiper-slide .text-box > .btn-box{
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+.section-5 .contents .webdesign-box > .main-box .swiper-slide .text-box > .btn-box a {
+  margin: 0;
+  height: auto;
+}
+
+
+.section-5 .contents .webdesign-box > .main-box .swiper-slide .text-box button{
+  width: 509px;
+  height: 63px;
+  border-radius: 30px;
+  background-color: #535353;
+  border: 1px solid #FFFFFF;
+  font-family: "Pretendard";
+  font-weight: 200;
+  color: #ffffff;
+  font-size: 18px;
+  margin-top: 22px;
+  cursor: pointer;
+}
+.section-5 .contents .webdesign-box > .main-box .swiper-slide .text-box button:hover{
+  background-color: #ffffff;
+  color: #2A2424;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s, color 0.3s; 
+}
+
+.section-5 .contents .webdesign-box > .main-box .swiper-pagination{
+  margin-top: 100px;
+  right: 0;
+  z-index: unset;
+}
+.section-5 .contents .webdesign-box > .main-box .swiper-pagination-bullet{
+  width: 50px;
+  height: 3px;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+.section-5 .contents .webdesign-box > .main-box .swiper-pagination-custom-bullet-active{
+  background-color: #F5DCD7;
+}
+/* UXUI */
+
+.section-5 .contents .webdesign-box > .main-box > .uxui .text-box{
+  margin-right: 63px;
+  margin-left: 100px;
+}
+.section-5 .contents .webdesign-box > .main-box > .uxui > h1{
+  display: inline-block;
+  margin-left: 1032px;
+  color: #ffffff;
+}
+/* GRAPHICS */
+.section-5 .contents .webdesign-box > .main-box .graphics .swiper-slide .img-box{
+  margin-right: 65px;
+
+}
+
+.section-5 .windowimg-box > img{
+  margin-left: 38px;
+}
+
+/* CHARACTER */
+.section-5 .contents .webdesign-box > .main-box > .Character .text-box{
+  margin-right: 63px;
+  margin-left: 100px;
+}
+.section-5 .contents .webdesign-box > .main-box > .Character > h1{
+  display: inline-block;
+  margin-left: 800px;
+  color: #ffffff;
+}
+
+
+/* section-6 */
+
+.section-6{
+  width: 100%;
+  height: 300px;
+
+}
+.section-6 h1::before{
+  content: "";
+  display: block;
+  height: 525px;
+}
+.section-6 h1{
+  font-family: "Pretendard";
+  font-weight: 700;
+  color: #F5DCD7;
+  font-size: 55px;
+  letter-spacing: -1px;
+  /* margin-left: 794px; */
+  text-align: center;
+}
+.section-6 .text-box-2{
+  margin-top: 250px;
+}
+.section-6 .text-box-2 p{
+  text-align: right;
+  margin-right: 40px;
+  font-family: "Pretendard";
+  font-weight: 200;
+  font-size: 18px;
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 30px;
+}
+.section-6 .text-box-2 .contact{
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.section-6 .img-box{
+  text-align: right;
+  margin-right: 200px;
+}
+
+
+
+
+/*  
+1. 컨텐츠 부분 일단 보류 
+2. 탑바 맨 위 여백 없애기 
+ */
+
