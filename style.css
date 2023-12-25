@@ -627,7 +627,7 @@ a{
   background-size: cover;
   background-position: center;
   width: 1920px;
-  height: 6808px;
+  height: 3822px;
 }
 .section-4::before{
   content: "";
@@ -684,7 +684,7 @@ a{
   background-color: #306F48;
   transition: background-color 0.4s, color 0.4s; 
 }
-.section-4 > .menu-box li:hover span{
+.section-4 > .menu-box li:hover .a > span{
   color: #F5DCD7;
   transition: background-color 0.4s, color 0.4s; 
 }
@@ -692,49 +692,49 @@ a{
   color: #ffffff;
   transition: background-color 0.4s, color 0.4s; 
 }
-.section-4 > .menu-box li > a{
+.section-4 > .menu-box li > .a{
   display: flex;
   margin-top: 50px;
   margin-left: 65px;
 }
-.section-4 > .menu-box li > a > span{
+.section-4 > .menu-box li > .a > span{
   font-family: "Pretendard";
   font-weight: 700;
   color: #306F48;
   font-size: 40px;
   letter-spacing: -1px;
 }
-.section-4 > .menu-box li > a > .submenu{
+.section-4 > .menu-box li > .a > .submenu{
   font-family: "Pretendard";
   font-weight: 500;
   color: #487D5C;
   font-size: 23px;
   letter-spacing: -1px;
 }
-.section-4 > .menu-box li > a > .submenu1{
+.section-4 > .menu-box li > .a > .submenu1{
   margin-left: 69px;
 }
-.section-4 > .menu-box li > a > .submenu2{
+.section-4 > .menu-box li > .a > .submenu2{
   margin-left: 181px;
 }
-.section-4 > .menu-box li > a > .submenu3{
+.section-4 > .menu-box li > .a > .submenu3{
   margin-left: 106px;
 }
-.section-4 > .menu-box li > a > .submenu4{
+.section-4 > .menu-box li > .a > .submenu4{
   margin-left: 69px;
 }
-.section-4 > .menu-box li > a > .submenu > p{
+.section-4 > .menu-box li > .a > .submenu > p{
   line-height: 0;
   margin-bottom: 40px;
 }
-.section-4 > .menu-box li > a > .submenu3{
+.section-4 > .menu-box li > .a > .submenu3{
   display: flex;
 }
-.section-4 > .menu-box li > a > .submenu3 > .left-p > p{
+.section-4 > .menu-box li > .a > .submenu3 > .left-p > p{
   line-height: 0;
   margin-bottom: 40px;
 }
-.section-4 > .menu-box li > a > .submenu3 > .right-p{
+.section-4 > .menu-box li > .a > .submenu3 > .right-p{
   margin-left: 80px;
   line-height: 0;
 }
@@ -757,7 +757,7 @@ a{
 
 .section-5 .toolbar-box{
   position: absolute;
-  left: 150px; top:350px;
+  left: 120px; top:230px;
 }
 
 .section-5 .contents{
@@ -774,7 +774,7 @@ a{
   border-radius: 10px 10px 0 0;
   position: absolute;
   left: 83px;
-  top: 150px;
+  top: 100px;
 }
 .section-5 .contents .webdesign-box > .tabmenu > a{
   display: flex;
@@ -786,63 +786,99 @@ a{
   color: #ffffff;
   font-size: 20px;
   margin-left: 24px;
-  margin-right: 130px;
+  margin-right: 230px;
 }
 
 
 .section-5 .contents .webdesign-box > .main-box{
   width: 1757px;
-  height: 4022px;
+  height: 1030px;
   background-color: #535353;
   position: absolute; margin: 0 auto;
   left: 83px;
-  top: 210px;
+  top: 160px;
+  border-top-right-radius: 10px; /* 오른쪽 상단 모서리 반지름 설정 */
+  border-bottom-right-radius: 10px; /* 하단 오른쪽 모서리 반지름 설정 */
+  border-bottom-left-radius: 1px;
 }
+
 
 /* 스와이퍼 부분 _ 웹 */
 .section-5 .contents .webdesign-box > .main-box .swiper{
   width: 100%;
   z-index: unset;
-  width: 1350px;
+  width: 1500px;
   margin: 0 auto;
+  margin-top: 155px;
+}
 
-}
-.section-5 .contents .webdesign-box > .main-box .swiper > h1{
-  margin-top: 195px;
-  font-family: "Cafe24Ohsquare";
-  color: #F5DCD7;
-  font-size: 90px;
-}
 
 .section-5 .contents .webdesign-box > .main-box .swiper-wrapper{
-  margin-left: auto;
-  margin-right: auto;
   z-index: unset;
   padding-bottom: 70px;
 }
 .section-5 .contents .webdesign-box > .main-box .swiper-slide{
   display: flex;
-  width: 100%;
+  /* border: 11px solid red; */
+  width: 1300px;
 }
 .section-5 .contents .webdesign-box > .main-box .web .swiper-slide .img-box{
-  margin-right: 65px;
+  position: relative;
+  margin-left: 100px;
+  
+}
+
+
+.section-5 .contents .webdesign-box > .main-box .swiper-slide img{
+  width: 1300px;
+  height: 730px;
+  object-fit: cover;
 
 }
-.section-5 .contents .webdesign-box > .main-box .swiper-slide img{
-  width: 673px;
-  height: 500px;
-  object-fit: cover;
+.section-5 .contents .webdesign-box > .main-box .swiper .swiper-slide .text-box{
+  position: absolute;
+  background-color: rgba(0,0,0,0.78);
+  width: 1300px;
+  height: 730px;
+  opacity: 0; /* 처음에는 투명하게 설정 */
+  transition: opacity 1s ease; /* 변화가 일어날 때 1초 동안 천천히 나타나도록 설정 */
+  margin-right: 70px;
+  margin-left: 100px;
 }
-.section-5 .contents .webdesign-box > .main-box .swiper-slide .text-box{
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
+.section-5 .contents .webdesign-box > .main-box .swiper .swiper-slide:hover .text-box{
+  opacity: 1;
+ 
+}
+.section-5 .contents .webdesign-box > .main-box .swiper .swiper-slide .uxui > h1{
+  color: #ffffff;
+}
+.section-5 .contents .webdesign-box > .main-box .swiper .swiper-slide .CHARACTER > h1{
+  color: #ffffff;
+}
+
+/* .section-5 .contents .webdesign-box > .main-box .web .swiper-slide .img-box .text-box h1{
+  margin-top: 300px;
+  font-family: "Cafe24Ohsquare";
+  color: #F5DCD7;
+  font-size: 90px;
+  border: 1px solid red;
+} */
+.section-5 .contents .webdesign-box > .main-box .swiper-slide .text-box h1{
+  font-family: "Cafe24Ohsquare";
+  font-weight: 800;
+  font-size: 90px;
+  color: #F5DCD7;
+  letter-spacing: -1px;
+  margin-top: 60px;
+  margin-left: 60px;
 }
 .section-5 .contents .webdesign-box > .main-box .swiper-slide .text-box h4{
   font-family: "Pretendard";
   font-weight: 500;
   font-size: 30px;
   color: #ffffff;
+  margin-left: 60px;
+  line-height: 10px;
 }
 .section-5 .contents .webdesign-box > .main-box .swiper-slide .text-box p{
   font-family: "Pretendard";
@@ -851,12 +887,18 @@ a{
   color: #ffffff;
   margin: 0;
   line-height: 34px;
+  margin-left: 60px;
 }
 .section-5 .contents .webdesign-box > .main-box .swiper-slide .text-box > .btn-box{
-  margin-top: 50px;
-  margin-bottom: 10px;
+  margin-top: 124px;
+  margin-right: 60px; 
+  display: flex;
+  flex-direction: column;
+  align-items: end;
 }
-
+.section-5 .contents .webdesign-box > .main-box .swiper-slide .text-box > .btn2{
+  margin-top: 218px;
+}
 .section-5 .contents .webdesign-box > .main-box .swiper-slide .text-box > .btn-box a {
   margin: 0;
   height: auto;
@@ -864,17 +906,18 @@ a{
 
 
 .section-5 .contents .webdesign-box > .main-box .swiper-slide .text-box button{
-  width: 509px;
+  width: 520px;
   height: 63px;
   border-radius: 30px;
-  background-color: #535353;
   border: 1px solid #FFFFFF;
   font-family: "Pretendard";
-  font-weight: 200;
-  color: #ffffff;
-  font-size: 18px;
-  margin-top: 22px;
+  font-weight: 300;
+  font-size: 20px;
+  margin-top: 30px;
   cursor: pointer;
+  background: none;
+  color: #ffffff;
+
 }
 .section-5 .contents .webdesign-box > .main-box .swiper-slide .text-box button:hover{
   background-color: #ffffff;
@@ -897,23 +940,16 @@ a{
 .section-5 .contents .webdesign-box > .main-box .swiper-pagination-custom-bullet-active{
   background-color: #F5DCD7;
 }
-/* UXUI */
 
-.section-5 .contents .webdesign-box > .main-box > .uxui .text-box{
-  margin-right: 63px;
-  margin-left: 100px;
-}
-.section-5 .contents .webdesign-box > .main-box > .uxui > h1{
-  display: inline-block;
-  margin-left: 1032px;
-  color: #ffffff;
-}
+
+
+
+
 /* GRAPHICS */
 .section-5 .contents .webdesign-box > .main-box .graphics .swiper-slide .img-box{
   margin-right: 65px;
 
 }
-
 .section-5 .windowimg-box > img{
   margin-left: 38px;
 }
@@ -934,7 +970,7 @@ a{
 
 .section-6{
   width: 100%;
-  height: 300px;
+  height: 200px;
 
 }
 .section-6 h1::before{
