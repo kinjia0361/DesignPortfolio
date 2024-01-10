@@ -728,15 +728,15 @@ a{
   line-height: 0;
   margin-bottom: 40px;
 }
-.section-4 > .menu-box li > .a > .submenu3{
+.section-4 > .menu-box li > .a > .submenu3,.submenu1{
   display: flex;
 }
-.section-4 > .menu-box li > .a > .submenu3 > .left-p > p{
+.section-4 > .menu-box li > .a .left-p > p{
   line-height: 0;
   margin-bottom: 40px;
 }
-.section-4 > .menu-box li > .a > .submenu3 > .right-p{
-  margin-left: 80px;
+.section-4 > .menu-box li > .a .right-p{
+  margin-left: 70px;
   line-height: 0;
 }
 .section-4 > .menu-box .menu_bg{
@@ -965,7 +965,6 @@ a{
   margin-left: 800px;
   color: #ffffff;
 }
-
 
 /* section-6 */
 
